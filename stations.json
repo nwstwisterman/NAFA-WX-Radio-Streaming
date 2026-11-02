@@ -10,8 +10,9 @@
     "server_url": "https://nafa-wx-radio-streaming.onrender.com",
     "port": 10000,
     "stream": "https://radio.nafawxradio.org/WXL20.mp3",
-    "broadcast_type": "ShoutCast",
-    "encoder": "BUTT",
+    "hls_playlist": "https://nafa-wx-radio-streaming.onrender.com/live/playlist.m3u8",
+    "streaming_method": "HLS",
+    "encoder": "FFmpeg",
     "coverage": "Western New York and surrounding regions",
     "affiliation": "North American Forecasters Association"
   }

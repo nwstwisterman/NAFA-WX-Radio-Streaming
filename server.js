@@ -20,6 +20,8 @@ const mimeTypes = {
   '.mp3': 'audio/mpeg',
   '.wav': 'audio/wav',
   '.m4a': 'audio/mp4',
+  '.m3u8': 'application/vnd.apple.mpegurl',
+  '.ts': 'video/mp2t',
   '.txt': 'text/plain; charset=utf-8'
 };
 

@@ -7,19 +7,38 @@ North American Weather Radio Network is a weather radio streaming service affili
 - WXL20 — Rochester, NY — 162.550 MHz
 - Public web server: https://nafa-wx-radio-streaming.onrender.com
 - Render port: 10000
-- Live audio stream: https://radio.nafawxradio.org/WXL20.mp3
+- HLS playlist: https://nafa-wx-radio-streaming.onrender.com/live/playlist.m3u8
+- Live audio stream fallback: https://radio.nafawxradio.org/WXL20.mp3
 
-## ShoutCast + BUTT configuration
+## HLS browser streaming setup
 
-Use the Render site as the local web host for the project and use the actual broadcast parameters for your ShoutCast source.
+This project is set up for browser-based streaming using HLS.
 
-Recommended config values:
+### Required source workflow
 
-- Server URL: https://nafa-wx-radio-streaming.onrender.com
-- Port: 10000
-- Stream source: https://radio.nafawxradio.org/WXL20.mp3
-- Server type: ShoutCast
-- Format: MP3
-- Bitrate: 128 kbps
+1. Use FFmpeg on a local machine with microphone input.
+2. Generate HLS segments and a playlist file.
+3. Upload the playlist and segment files to the Render app under a /live folder.
+4. Point the browser player to the playlist URL.
+
+### Example FFmpeg command
+
+```bash
+ffmpeg -f alsa -i default \
+  -acodec libmp3lame -ar 44100 -b:a 128k \
+  -f hls -hls_time 3 -hls_list_size 10 \
+  -hls_segment_filename output/segment_%03d.ts \
+  output/playlist.m3u8
+```
+
+### Browser player usage
+
+```html
+<audio controls>
+  <source src="https://nafa-wx-radio-streaming.onrender.com/live/playlist.m3u8" type="application/x-mpegURL">
+</audio>
+```
+
+This approach is intended for browser-only listeners and mic-based broadcasting.
 
 WX Radio Streaming for all nations in the NAFA Coverage area (USA, Canada, Mexico)
