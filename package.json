@@ -1,0 +1,9 @@
+{
+  "name": "nafa-wx-radio-streaming",
+  "version": "1.0.0",
+  "description": "North American Weather Radio Network streaming site",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
