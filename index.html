@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North American Weather Radio Network</title>
-    <meta name="description" content="North American Weather Radio Network, affiliated with the North American Forecasters Association. Live weather radio streaming for emergencies and forecasts.">
+    <meta name="description" content="North American Weather Radio Network, affiliated with the North American Forecasters Association. Icecast-enabled weather radio streaming for WXL20.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,8 +19,8 @@
             </div>
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="#live">Live</a>
-                <a href="#coverage">Coverage</a>
                 <a href="#station-info">Station Info</a>
+                <a href="#butt">BUTT Setup</a>
             </nav>
         </div>
     </header>
@@ -28,14 +28,15 @@
     <main class="container">
         <section class="hero" id="live">
             <div class="hero-copy">
-                <p class="status-pill"><span class="dot"></span> Weather radio streaming live</p>
-                <h2>Real-time severe weather, forecasts, and emergency alerts.</h2>
+                <p class="status-pill"><span class="dot"></span> Icecast weather stream</p>
+                <h2>Live severe weather, forecasts, and emergency alerts.</h2>
                 <p class="lead">
-                    Broadcasting trusted weather information across North America with a commitment to public safety,\n                    emergency awareness, and local forecasting coverage.
+                    North American Weather Radio Network is configured for Icecast streaming so WXL20 can be broadcast
+                    live from a BUTT encoder and delivered to listeners across the NAFA coverage area.
                 </p>
                 <div class="cta-row">
                     <a class="button primary" href="https://radio.nafawxradio.org/WXL20.mp3" target="_blank" rel="noopener noreferrer">Listen Live</a>
-                    <a class="button secondary" href="#station-info">Station Details</a>
+                    <a class="button secondary" href="#butt">BUTT Setup</a>
                 </div>
             </div>
 
@@ -48,8 +49,9 @@
                 <p class="location">Rochester, New York</p>
                 <ul>
                     <li><strong>Frequency:</strong> 162.550 MHz</li>
-                    <li><strong>Mode:</strong> NOAA Weather Radio / Public Safety</li>
-                    <li><strong>Coverage:</strong> Western New York &amp; surrounding regions</li>
+                    <li><strong>Stream type:</strong> Icecast / MP3</li>
+                    <li><strong>Encoder:</strong> BUTT</li>
+                    <li><strong>Mount:</strong> /WXL20</li>
                 </ul>
             </div>
         </section>
@@ -71,12 +73,42 @@
 
                 <div class="stream-links">
                     <a href="https://radio.nafawxradio.org/WXL20.mp3" target="_blank" rel="noopener noreferrer">Direct MP3 Stream</a>
-                    <a href="#coverage">Coverage Area</a>
+                    <a href="#butt">BUTT Source Settings</a>
                 </div>
             </div>
         </section>
 
-        <section class="info-grid" id="coverage">
+        <section class="butt-box" id="butt">
+            <h3>Broadcast with BUTT</h3>
+            <div class="butt-grid">
+                <div class="config-card">
+                    <h4>Suggested Icecast settings</h4>
+                    <ul>
+                        <li><span>Server:</span> radio.nafawxradio.org</li>
+                        <li><span>Port:</span> 8000</li>
+                        <li><span>Mount:</span> /WXL20</li>
+                        <li><span>Login:</span> source</li>
+                        <li><span>Password:</span> your-icecast-source-password</li>
+                        <li><span>Format:</span> MP3</li>
+                        <li><span>Bitrate:</span> 128 kbps</li>
+                    </ul>
+                </div>
+
+                <div class="config-card">
+                    <h4>In BUTT</h4>
+                    <ol>
+                        <li>Open BUTT and select the streaming server tab.</li>
+                        <li>Choose Icecast as the server type.</li>
+                        <li>Set the hostname to your Icecast server address.</li>
+                        <li>Set the source port and mount point to /WXL20.</li>
+                        <li>Enter the Icecast source password provided by your server admin.</li>
+                        <li>Pick MP3 at 128 kbps and click Start Streaming.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-grid">
             <article class="info-card">
                 <h3>About the Network</h3>
                 <p>
@@ -86,18 +118,18 @@
             </article>
 
             <article class="info-card">
-                <h3>Station Details</h3>
+                <h3>WXL20</h3>
                 <p>
-                    WXL20 operates on 162.550 MHz and is dedicated to emergency weather information, short-term forecasts,
-                    and public safety advisories for the Rochester area and neighboring regions.
+                    WXL20 is delivered as an Icecast-based stream for live broadcast use and public listener access. This setup
+                    is designed to work with BUTT and other Icecast-compatible encoders.
                 </p>
             </article>
 
             <article class="info-card">
-                <h3>Why It Matters</h3>
+                <h3>Emergency Use</h3>
                 <p>
                     Weather radio is one of the most reliable tools for receiving severe weather warnings and emergency
-                    information when other forms of communications may be disrupted.
+                    information when other communication channels may be disrupted.
                 </p>
             </article>
         </section>
