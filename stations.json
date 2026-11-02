@@ -8,6 +8,7 @@
     "frequency": "162.550 MHz",
     "status": "online",
     "server_url": "https://nafa-wx-radio-streaming.onrender.com",
+    "port": 10000,
     "stream": "https://radio.nafawxradio.org/WXL20.mp3",
     "broadcast_type": "ShoutCast",
     "encoder": "BUTT",

@@ -5,16 +5,18 @@ North American Weather Radio Network is a weather radio streaming service affili
 ## Current station
 
 - WXL20 — Rochester, NY — 162.550 MHz
+- Public web server: https://nafa-wx-radio-streaming.onrender.com
+- Render port: 10000
+- Live audio stream: https://radio.nafawxradio.org/WXL20.mp3
+
+## ShoutCast + BUTT configuration
+
+Use the Render site as the local web host for the project and use the actual broadcast parameters for your ShoutCast source.
+
+Recommended config values:
+
 - Server URL: https://nafa-wx-radio-streaming.onrender.com
-- Live stream: https://radio.nafawxradio.org/WXL20.mp3
-
-## ShoutCast + BUTT setup
-
-Use the Render-hosted service as your primary web server URL for station metadata and page hosting. The station stream can still be broadcast from your ShoutCast/BUTT source configuration.
-
-Recommended portal settings:
-
-- Main server URL: https://nafa-wx-radio-streaming.onrender.com
+- Port: 10000
 - Stream source: https://radio.nafawxradio.org/WXL20.mp3
 - Server type: ShoutCast
 - Format: MP3

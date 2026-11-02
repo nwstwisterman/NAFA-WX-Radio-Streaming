@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North American Weather Radio Network</title>
-    <meta name="description" content="North American Weather Radio Network homepage and live WXL20 weather radio stream.">
+    <meta name="description" content="North American Weather Radio Network — live weather radio streaming and emergency alerts for WXL20.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="#live">Live</a>
                 <a href="#station-info">Station</a>
-                <a href="#streaming">Streaming</a>
+                <a href="#streaming">Server Info</a>
             </nav>
         </div>
     </header>
@@ -29,13 +29,13 @@
         <section class="hero" id="live">
             <div class="hero-copy">
                 <p class="status-pill"><span class="dot"></span> Live weather radio</p>
-                <h2>Severe weather, forecasts, and emergency alerts for North America.</h2>
+                <h2>Real-time severe weather, forecasts, and emergency alerts.</h2>
                 <p class="lead">
-                    The North American Weather Radio Network serves communities across the NAFA coverage area with
-                    weather radio streaming and public safety information for the United States, Canada, and Mexico.
+                    The North American Weather Radio Network serves the NAFA coverage area with public weather radio,
+                    emergency information, and local forecast updates across the United States, Canada, and Mexico.
                 </p>
                 <div class="cta-row">
-                    <a class="button primary" href="https://nafa-wx-radio-streaming.onrender.com" target="_blank" rel="noopener noreferrer">Open Stream Page</a>
+                    <a class="button primary" href="https://nafa-wx-radio-streaming.onrender.com" target="_blank" rel="noopener noreferrer">Open Main Server</a>
                     <a class="button secondary" href="#station-info">Station Details</a>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 <ul>
                     <li><strong>Frequency:</strong> 162.550 MHz</li>
                     <li><strong>Server:</strong> https://nafa-wx-radio-streaming.onrender.com</li>
-                    <li><strong>Format:</strong> MP3 weather radio stream</li>
+                    <li><strong>Port:</strong> 10000</li>
                     <li><strong>Affiliation:</strong> North American Forecasters Association</li>
                 </ul>
             </div>
@@ -82,15 +82,16 @@
             <article class="info-card">
                 <h3>Station Information</h3>
                 <p>
-                    WXL20 is the flagship station for the North American Weather Radio Network and is configured for
-                    live public weather streaming.
+                    WXL20 is the flagship station for the North American Weather Radio Network. It is configured to be used
+                    as a live weather radio stream with a Render-hosted server and ShoutCast-compatible source setup.
                 </p>
             </article>
 
             <article class="info-card">
-                <h3>Main Server</h3>
+                <h3>Main Server Config</h3>
                 <p>
-                    Primary web server: https://nafa-wx-radio-streaming.onrender.com
+                    Public server URL: https://nafa-wx-radio-streaming.onrender.com<br>
+                    Internal Render port: 10000
                 </p>
             </article>
 
@@ -98,7 +99,7 @@
                 <h3>Emergency Preparedness</h3>
                 <p>
                     Weather radio remains one of the most dependable channels for severe weather warnings and emergency
-                    information when normal communication systems may be disrupted.
+                    information when normal communications may be disrupted.
                 </p>
             </article>
         </section>
