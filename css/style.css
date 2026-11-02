@@ -155,7 +155,6 @@ h1 {
 
 .station-panel,
 .player-card,
-.config-card,
 .info-card {
     background: rgba(10, 27, 39, 0.82);
     border: 1px solid rgba(137, 183, 215, 0.2);
@@ -197,8 +196,7 @@ h1 {
 }
 
 .station-panel h3,
-.player-card h3,
-.butt-box h3 {
+.player-card h3 {
     margin: 18px 0 10px;
     font-size: clamp(2rem, 3vw, 2.8rem);
     letter-spacing: -0.04em;
@@ -247,38 +245,6 @@ audio {
     font-weight: 700;
 }
 
-.butt-box {
-    margin: 10px 0 30px;
-}
-
-.butt-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.config-card {
-    padding: 22px;
-}
-
-.config-card h4 {
-    margin: 0 0 14px;
-    font-size: 1.2rem;
-}
-
-.config-card ul,
-.config-card ol {
-    margin: 0;
-    padding-left: 20px;
-    line-height: 1.8;
-    color: #dfeeff;
-}
-
-.config-card li span {
-    font-weight: 700;
-    color: #9dd7ff;
-}
-
 .info-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -305,8 +271,7 @@ audio {
 @media (max-width: 760px) {
     .header-inner,
     .hero,
-    .info-grid,
-    .butt-grid {
+    .info-grid {
         grid-template-columns: 1fr;
         display: grid;
     }

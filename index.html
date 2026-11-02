@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North American Weather Radio Network</title>
-    <meta name="description" content="North American Weather Radio Network, affiliated with the North American Forecasters Association. ShoutCast-enabled weather radio streaming for WXL20.">
+    <meta name="description" content="North American Weather Radio Network homepage and live WXL20 weather radio stream.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,8 +19,8 @@
             </div>
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="#live">Live</a>
-                <a href="#station-info">Station Info</a>
-                <a href="#butt">BUTT Setup</a>
+                <a href="#station-info">Station</a>
+                <a href="#streaming">Streaming</a>
             </nav>
         </div>
     </header>
@@ -28,15 +28,15 @@
     <main class="container">
         <section class="hero" id="live">
             <div class="hero-copy">
-                <p class="status-pill"><span class="dot"></span> ShoutCast weather stream</p>
-                <h2>Live severe weather, forecasts, and emergency alerts.</h2>
+                <p class="status-pill"><span class="dot"></span> Live weather radio</p>
+                <h2>Severe weather, forecasts, and emergency alerts for North America.</h2>
                 <p class="lead">
-                    North American Weather Radio Network is configured for ShoutCast streaming so WXL20 can be broadcast
-                    live from a BUTT encoder and delivered to listeners across the NAFA coverage area.
+                    The North American Weather Radio Network serves communities across the NAFA coverage area with
+                    weather radio streaming and public safety information for the United States, Canada, and Mexico.
                 </p>
                 <div class="cta-row">
-                    <a class="button primary" href="https://radio.nafawxradio.org/WXL20.mp3" target="_blank" rel="noopener noreferrer">Listen Live</a>
-                    <a class="button secondary" href="#butt">BUTT Setup</a>
+                    <a class="button primary" href="https://nafa-wx-radio-streaming.onrender.com" target="_blank" rel="noopener noreferrer">Open Stream Page</a>
+                    <a class="button secondary" href="#station-info">Station Details</a>
                 </div>
             </div>
 
@@ -49,9 +49,9 @@
                 <p class="location">Rochester, New York</p>
                 <ul>
                     <li><strong>Frequency:</strong> 162.550 MHz</li>
-                    <li><strong>Stream type:</strong> ShoutCast / MP3</li>
-                    <li><strong>Encoder:</strong> BUTT</li>
-                    <li><strong>Mount:</strong> /WXL20</li>
+                    <li><strong>Server:</strong> https://nafa-wx-radio-streaming.onrender.com</li>
+                    <li><strong>Format:</strong> MP3 weather radio stream</li>
+                    <li><strong>Affiliation:</strong> North American Forecasters Association</li>
                 </ul>
             </div>
         </section>
@@ -73,63 +73,32 @@
 
                 <div class="stream-links">
                     <a href="https://radio.nafawxradio.org/WXL20.mp3" target="_blank" rel="noopener noreferrer">Direct MP3 Stream</a>
-                    <a href="#butt">BUTT Source Settings</a>
+                    <a href="https://nafa-wx-radio-streaming.onrender.com" target="_blank" rel="noopener noreferrer">Main Server URL</a>
                 </div>
             </div>
         </section>
 
-        <section class="butt-box" id="butt">
-            <h3>Broadcast with BUTT</h3>
-            <div class="butt-grid">
-                <div class="config-card">
-                    <h4>Suggested ShoutCast settings</h4>
-                    <ul>
-                        <li><span>Server:</span> radio.nafawxradio.org</li>
-                        <li><span>Port:</span> 8000</li>
-                        <li><span>Mount:</span> /WXL20</li>
-                        <li><span>Login:</span> source</li>
-                        <li><span>Password:</span> your-shoutcast-source-password</li>
-                        <li><span>Format:</span> MP3</li>
-                        <li><span>Bitrate:</span> 128 kbps</li>
-                    </ul>
-                </div>
-
-                <div class="config-card">
-                    <h4>In BUTT</h4>
-                    <ol>
-                        <li>Open BUTT and select the streaming server tab.</li>
-                        <li>Choose ShoutCast as the server type.</li>
-                        <li>Set the hostname to your ShoutCast server address.</li>
-                        <li>Set the source port and mount point to /WXL20.</li>
-                        <li>Enter the ShoutCast source password provided by your server admin.</li>
-                        <li>Pick MP3 at 128 kbps and click Start Streaming.</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-
-        <section class="info-grid">
+        <section class="info-grid" id="streaming">
             <article class="info-card">
-                <h3>About the Network</h3>
+                <h3>Station Information</h3>
                 <p>
-                    The North American Weather Radio Network delivers continuous, real-time weather and hazard information
-                    for communities throughout the NAFA coverage area, including the United States, Canada, and Mexico.
+                    WXL20 is the flagship station for the North American Weather Radio Network and is configured for
+                    live public weather streaming.
                 </p>
             </article>
 
             <article class="info-card">
-                <h3>WXL20</h3>
+                <h3>Main Server</h3>
                 <p>
-                    WXL20 is delivered as a ShoutCast-based stream for live broadcast use and public listener access. This setup
-                    is designed to work with BUTT and other ShoutCast-compatible encoders.
+                    Primary web server: https://nafa-wx-radio-streaming.onrender.com
                 </p>
             </article>
 
             <article class="info-card">
-                <h3>Emergency Use</h3>
+                <h3>Emergency Preparedness</h3>
                 <p>
-                    Weather radio is one of the most reliable tools for receiving severe weather warnings and emergency
-                    information when other communication channels may be disrupted.
+                    Weather radio remains one of the most dependable channels for severe weather warnings and emergency
+                    information when normal communication systems may be disrupted.
                 </p>
             </article>
         </section>
