@@ -1,1 +1,10 @@
-
+{
+  "WXL20": {
+    "callsign": "WXL20",
+    "city": "Rochester",
+    "state": "NY",
+    "frequency": "162.550 MHz",
+    "status": "online",
+    "stream": "https://radio.nafawxradio.org/WXL20.mp3"
+  }
+}
