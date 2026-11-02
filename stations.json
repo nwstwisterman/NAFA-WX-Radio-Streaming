@@ -7,17 +7,17 @@
     "country": "USA",
     "frequency": "162.550 MHz",
     "status": "online",
-    "broadcast_type": "Icecast",
+    "broadcast_type": "ShoutCast",
     "encoder": "BUTT",
     "stream": "https://radio.nafawxradio.org/WXL20.mp3",
-    "icecast": {
+    "shoutcast": {
       "server": "radio.nafawxradio.org",
       "port": 8000,
       "mount": "/WXL20",
       "format": "MP3",
       "bitrate": "128 kbps",
       "login": "source",
-      "password": "your-icecast-source-password"
+      "password": "your-shoutcast-source-password"
     },
     "coverage": "Western New York and surrounding regions",
     "affiliation": "North American Forecasters Association"
