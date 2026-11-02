@@ -1,38 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North American Weather Radio Network</title>
+    <meta name="description" content="North American Weather Radio Network, affiliated with the North American Forecasters Association. Live weather radio streaming for emergencies and forecasts.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="topbar">
+        <div class="container header-inner">
+            <div class="brand-block">
+                <div class="brand-mark">N</div>
+                <div>
+                    <p class="eyebrow">Affiliated with the North American Forecasters Association</p>
+                    <h1>North American Weather Radio Network</h1>
+                </div>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#live">Live</a>
+                <a href="#coverage">Coverage</a>
+                <a href="#station-info">Station Info</a>
+            </nav>
+        </div>
+    </header>
 
-<header>
-    <h1>North American Weather Radio Network</h1>
-    <p>Live NOAA Weather Radio Streaming</p>
-</header>
+    <main class="container">
+        <section class="hero" id="live">
+            <div class="hero-copy">
+                <p class="status-pill"><span class="dot"></span> Weather radio streaming live</p>
+                <h2>Real-time severe weather, forecasts, and emergency alerts.</h2>
+                <p class="lead">
+                    Broadcasting trusted weather information across North America with a commitment to public safety,\n                    emergency awareness, and local forecasting coverage.
+                </p>
+                <div class="cta-row">
+                    <a class="button primary" href="https://radio.nafawxradio.org/WXL20.mp3" target="_blank" rel="noopener noreferrer">Listen Live</a>
+                    <a class="button secondary" href="#station-info">Station Details</a>
+                </div>
+            </div>
 
-<div class="station-card">
-    <h2>WXL20</h2>
+            <div class="station-panel" aria-live="polite">
+                <div class="panel-header">
+                    <span class="station-label">Current station</span>
+                    <span class="online-text">Online</span>
+                </div>
+                <h3>WXL20</h3>
+                <p class="location">Rochester, New York</p>
+                <ul>
+                    <li><strong>Frequency:</strong> 162.550 MHz</li>
+                    <li><strong>Mode:</strong> NOAA Weather Radio / Public Safety</li>
+                    <li><strong>Coverage:</strong> Western New York &amp; surrounding regions</li>
+                </ul>
+            </div>
+        </section>
 
-    <p>
-        Rochester, New York<br>
-        Frequency: 162.550 MHz
-    </p>
+        <section class="player-section" id="station-info">
+            <div class="player-card">
+                <div class="player-header">
+                    <div>
+                        <p class="mini-label">Now playing</p>
+                        <h3>WXL20 • Rochester, NY</h3>
+                    </div>
+                    <span class="signal">Broadcasting</span>
+                </div>
 
-    <span class="online">● Online</span>
+                <audio controls preload="none">
+                    <source src="https://radio.nafawxradio.org/WXL20.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
 
-    <br><br>
+                <div class="stream-links">
+                    <a href="https://radio.nafawxradio.org/WXL20.mp3" target="_blank" rel="noopener noreferrer">Direct MP3 Stream</a>
+                    <a href="#coverage">Coverage Area</a>
+                </div>
+            </div>
+        </section>
 
-    <audio controls>
-        <source src="https://radio.nafawxradio.org/WXL20.mp3" type="audio/mpeg">
-    </audio>
+        <section class="info-grid" id="coverage">
+            <article class="info-card">
+                <h3>About the Network</h3>
+                <p>
+                    The North American Weather Radio Network delivers continuous, real-time weather and hazard information
+                    for communities throughout the NAFA coverage area, including the United States, Canada, and Mexico.
+                </p>
+            </article>
 
-    <br><br>
+            <article class="info-card">
+                <h3>Station Details</h3>
+                <p>
+                    WXL20 operates on 162.550 MHz and is dedicated to emergency weather information, short-term forecasts,
+                    and public safety advisories for the Rochester area and neighboring regions.
+                </p>
+            </article>
 
-    <a href="https://radio.nafawxradio.org/WXL20.mp3">
-        Direct MP3 Stream
-    </a>
-</div>
-
+            <article class="info-card">
+                <h3>Why It Matters</h3>
+                <p>
+                    Weather radio is one of the most reliable tools for receiving severe weather warnings and emergency
+                    information when other forms of communications may be disrupted.
+                </p>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
